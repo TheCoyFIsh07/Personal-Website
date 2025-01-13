@@ -1,0 +1,51 @@
+
+table code
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favorite Music and Movies</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <table>
+    <caption>My Favorite Music and Movies</caption>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artist/Director</th>
+        <th>Type</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sweater</td>
+        <td>Spencer Sutherland</td>
+        <td>Music</td>
+        <td>2019</td>
+      </tr>
+      <tr>
+        <td>The LEGO Batman Movie</td>
+        <td>Chris McKay</td>
+        <td>Movie</td>
+        <td>2017</td>
+      </tr>
+      <tr>
+        <td>Insomnia</td>
+        <td>Kodoku</td>
+        <td>Music</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>DownFall of Diddy</td>
+        <td>Apple TV</td>
+        <td>Movie</td>
+        <td>2024</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+

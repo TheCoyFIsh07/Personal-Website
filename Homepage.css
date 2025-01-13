@@ -1,0 +1,263 @@
+/*--
+
+Personal project 
+Author: Nicholas Kenner
+Date: 10-31-2024
+Time: 8:00 pm
+
+*/
+
+/* Importing Google Font: Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100,300,400,500,700&display=swap'); /* rule allows you to import external stylesheets. In this case, it's importing a font from an external URL. */
+
+/* Global styles for all elements, resetting padding, margin, and setting box-sizing */
+* {
+    padding: 0; /* This sets the padding of an element to 0, removing any default padding */
+    margin: 0; /* This sets the margin of an element to 0, removing any default margin applied */
+    box-sizing: border-box; /* This changes the box-sizing model to border-box, simplafiying the layout calcaulations*/
+}
+
+/* Defining root variables for primary color and text color */
+:root {
+    --primary-color: #bda928;  /* This line creates a CSS variable called Primary-color with a color value of #bda928 */
+    --text-color: #930505; /* This line creates a CSS variable called text-color with a color value of #930505 */
+}
+
+/* Setting base font size for the document */
+html {
+    font-size: 12px; 
+}
+
+/* Body styles: font, background image, text color, and vertical scroll behavior */
+body {
+    font-family: 'Roboto', sans-serif; /* Sets the font family of the text within the <body> to Roboto. If Roboto isn’t available, it will use a generic sans-serif */
+    background: url(warhammerphotos/number1.jpg) no-repeat; /*the background image*/
+    background-size: cover; /* Scales the background image to cover the entire viewport */
+    overflow-y: auto; /* Enables vertical scrolling if the content exceeds the viewport height */
+}
+
+
+/* reused styles */
+
+/* Styling for all images to fill their container */
+img {
+    width: 100%; /*  makes each image expand to fill the full width of its parent container, adjusting its size based on the available space. */
+}
+
+/* Links: no underline and primary color */
+a {
+    text-decoration: none;  /* Removes the underline */
+    color:#bda928; /* change bullet points in implants to yellow when highlighted */
+    }
+
+
+
+/* Description  styles with uppercase text, bold weight, and primary color */
+.description{
+    margin-top: 1rem; /* Adds a top margin of 1 rem, moving down the elements in the list */
+    font-size: 1.5rem;
+    font-weight: 400; /* sets the thickness of the font */
+    color: var(--text-color); /* Text color from root variable */
+}
+
+/*  : uppercase, bold, and primary color */
+.title{
+    color: ver(--primary-color); /*Uses Primary color veriable */
+    font-weight: 900; /* sets the thickness of the font */
+    font-size: 2rem;
+    text-transform: uppercase; /* Converts text to uppercase */
+
+}
+
+/* layouts */
+/* Container settings: width, padding, and background */
+.container {
+    max-width: 1000px; /*Limits the maximum width of .container to 1000 pixels */
+    width: 90%; /* Sets the width of .container to 90% of its parent container */
+    margin: 0 auto; /*Sets the width of .container to 90% of its parent container */
+    padding: 2rem; /* Adds 2 rem of padding inside .container, creating space around its content. */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    grid-template-columns: 1fr; /* This code creates a grid layout with only one column. */
+    overflow-x: hidden; /* Prevents horizontal scrolling by hiding any content that overflows horizontally.*/
+    overflow-y: auto; /*Allows vertical scrolling if the content exceeds the container’s height.*/
+    max-height: 100vh; /* Limit the container's height to viewport height */
+}
+
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 768px) { /*  */
+    .container {
+        width: 100%; /* Sets the width of .container to 100%  */
+        grid-template-columns: 1fr; /* making the column take up the entire available space. */
+        padding: 3rem; /* Adds 3 rem of padding around the content inside */
+        gap: 7rem; /* Adjust gap between elements */
+    }
+}
+
+/* Adjest porarmaters of the photo of dante to aligne it in the middle */
+.profile_container {
+    display: flex; /*enables flexible layout properties. */
+    justify-content: center; /* Centers photo of dante horizontally */
+    align-items: center;     /* Centers photo of dante vertically */
+}
+
+/* Adjest size of the photo of dantai so it fits into the paramatets*/
+.profile_profileimg img {
+    max-width: 250px;        /* Controls the size of image of dante limiting 250px */
+    height: auto;            /* Automatically adjusts the height to maintain the image's original aspect ratio*/
+}
+
+/* Implant list layout */
+/* Implant */
+.Implant_list{
+    margin-top: 1rem; /* Adds a top margin of 1 rem, moving down the elements in the list */
+    margin-left: 2rem; /* Adds a left margin of 2 rem, moving list elements to right. */
+    line-height: 2; /* Increase space between list items */
+}
+
+
+/* Implant effects the size of the of the title world implants */
+.Implants {
+    margin-top: 1rem; /* Moves the info in implats down from the top */
+    padding: 1rem; /* Adds padding inside the element, creating space between the content and the border on all sides. */
+    color: #bda928; /* color of text in implants */
+    font-size: 1.8rem; /* font size of implants*/
+}
+
+/*Effects the size of the titles of the battles */
+.battle-item {
+    font-size: 1.8rem;   /* Sets the font size*/
+    color: #bda928; /* Default color of battle titles*/
+    transition: color 0.3s ease, font-size 0.3s ease; /*makes the transtion smoother on the hovers */
+
+}
+
+/*Makes the font bigger when you hover over it */
+.battle-item:hover {
+    font-size: 2rem; /* changes font size when hovered over */
+    background-color: rgba(179, 167, 167, 0.298); /* Light background on hover */
+}
+
+/*Effects the size and color of family members names*/
+.Family-item li {
+    color: #bda928; /* Default color of the text*/
+    font-size: 1.8rem; 
+    transition: color 0.3s ease, font-size 0.3s ease;  /* makes the transtion smoother on the hovers */
+}
+
+/*Changes the colors of the dots when you hover over the family*/
+.Family-item li:hover {
+    color: #930505; /* Change color of dots to red on hover */
+    font-size: 2rem; /* Optional: slightly increase font size on hover */
+}
+
+/* Adjest the orantation of the information in battles */
+.active_item{
+    margin-top: 2rem; /* Moves the info in battles down from the top */
+}
+
+/* Family section item styling */
+
+.fam_item{
+    margin-top: 2rem; /* Moves the info in family down from the top */
+}
+
+/* Equpmentlist section item styling */
+.Equpmentlist_item{
+    margin-top: 2rem; /* Moves the info in Equpment down from the top */
+    color: #930505; /* Default color */
+    font-size: 1.8rem; /* set font size of Equpment */
+    transition: color 0.3s ease, font-size 0.3s ease; /* makes the transtion more smooth */
+}
+
+
+
+/* Experience section item styling */
+/* exp */
+.exp_item{
+    margin-top: 2rem; /* Moves the info in History down from the top */
+    
+}
+
+/* Hover effect on list items */
+li:hover {
+    background-color: #444444; /* Adds a dark background when you hover over early life and life as a marine*/
+    color: #bda928; /* Changes text color */
+    padding: 0.5rem; /* Adds padding aka adjust the size of the block made when you hover over the words*/
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+
+}
+
+/* Footer styling */
+.footer {
+    text-align: left; /* Align text to the left */
+    background-color: #8a0d0db9; /* Dark red background */
+    color: #f3f70d; /* Footer text color */
+    padding: 1rem; /* effects the size of the footer box*/
+    margin-top: 3rem;   /* effects distance from the footer and the seprater*/
+    font-size: 1.2rem;
+    display: flex; /* Use flexbox to position content */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Vertically center text and image */
+}
+
+.footer img {
+    max-width: 150px; /* Adjust footer image size as needed */
+    margin-bottom: 0.5rem; /* Space between the image and email */
+}
+
+
+/* about me title styling */
+.about-me-section {
+    margin-top: 2rem; /* Adjust the distance between luis dante name and nav bar */
+    science: 1rem 0; /* sets the space from the top and bottom by and and from the left and right by 0*/
+    color: #bda928
+}
+
+/* About me font  */
+.about-description {
+    font-size: 1.3rem; /* sets font size of name*/
+    color: var(--text-color); /* sets color of the text using the text color variable */
+    font-weight: 400; /* sets the thickness of the font */
+    line-height: 1.8; /*Sets the line height */
+    
+}
+
+.section-divider {
+    border: 0; /*Removes any border around the section divider. */
+    height: 2px; /*Sets the thickness of the divider line to 2 pixels.*/
+    background: linear-gradient(to right, #234a91, rgba(255, 255, 255, 0.2)); /*Creates a gradient background that transitions from a solid color ( deep blue) on the left to a transparent white on the right. */
+    margin: 2rem 0; /* Adds 2 rem of vertical space at the top and bottom around the seprater */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow effect below the divider with a slight blur. */
+}
+
+.navbar {
+    background-color: #333; /*Sets the background color of the navigation bar to dark gray. */
+    overflow: hidden; /*Prevents overflow content from being displayed outside the navbar's boundaries */
+}
+
+.navbar ul {
+    list-style-type: none; /* Removes bullets from the list items, since this is a navigation menu */
+    margin: 0; /* Removes any default margin ul element*/
+    padding: 0; /* Removes any default padding around ul elment */
+}
+
+.navbar li {
+    float: left; /*puts each list item horizontally to the left by floating them */
+}
+
+.navbar li a {
+    display: block; /* causes the anchor tag to behave as a block element, so padding and margin can be adjused*/
+    color: white; /*Sets the text color to white */
+    text-align: center; /* Centers the text within the anchor element. */
+    padding: 14px 16px; /*Adds padding around each link, giving the menu items more clickable area */
+    text-decoration: none; /* Removes the underline from the links */
+}
+
+.navbar li a:hover {
+    background-color: #afc6e7; /* Change background color when hovered over.*/
+    color: black;  /* Change text color when hovered over.*/
+}
+
+
+ 
